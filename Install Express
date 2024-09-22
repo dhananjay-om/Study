@@ -1,0 +1,116 @@
+Install Express
+-----------------------
+
+yarn add express --save
+
+start server :  nodemon server
+
+Express js Routing 
+--------------------------
+Routing we can  say navigation from one page to another page
+- We have some method in routing
+  - GET, POST,PUT,DELETE
+
+  Example
+---------------------
+
+var express = require('express');
+
+//rest object
+
+var app = express();
+
+// Create Routes
+
+app.get('/get',(req,res)=>{
+    res.send('Youre are in get route');
+});
+
+app.post('/post',(req,res)=>{
+    res.send('Youre are in post route');
+});
+
+app.listen(8085);
+console.log('Server is running on port 8085'); 
+
+
+Get param
+---------------------
+
+var express = require('express');
+//rest object
+var app = express();
+app.get('/login/:username/:password', (req, res) => {
+    var username = req.params.username;
+    var password = req.params.password;
+    if(username=="admin" && password=="admin"){
+        res.send('Login Successful');
+    }else{
+        res.send('Login Failed');
+    } 
+});
+
+app.listen(8086);
+
+
+Post parameter in Express
+--------------------------------------
+
+Body parser is the third party module
+Used to read the POST Parameter
+You can donwload  
+  - Npm install body-parser --save
+  -yarn add body-parser --save
+
+
+Middlewear 
+---------------------
+Middlewear are function
+Next() is called middlewear in Nodejs
+Middlewear 	will execute before routing
+In general middlrewear ued  to perform  the authentiaton
+Example of third party middlewear
+  -Body parser  Module
+  -Cookie-parser Module
+  -Express-session Module
+
+ File System
+ ----------------------
+How File module work
+ -  "fs" module is the native  module in Node js
+ - "fs" module is used to work with flat Files
+ - "fs" stands for file system
+ -It is a built in module no need to download 
+ with the fs module you can  perform 
+   - Read file
+   -Write file
+   -Append file
+   -Delete/Remove
+
+
+  Reading file
+
+  You can read a file in two ways
+   - readfile()
+   -readfileAsunch()
+
+   1. readfile()
+    -  predefine function in fs module used to read the data synchronously
+   2.readfileAsynch()
+    -    -  predefine function in fs module used to read the data Asynchronously
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

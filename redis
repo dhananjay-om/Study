@@ -1,0 +1,18 @@
+
+Run Docker wit container
+---------------------------------
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+
+Execute docker  
+--------------------
+
+docker exec -it <container_id> bash
+
+GUI Access
+------------------
+http://localhost:8001/redis-stack/browser
+
+Run Command
+----------------
+redis-cli ping
+o/p - Pong

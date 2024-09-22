@@ -4,7 +4,7 @@ Step 1:
 sudo composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.6 magento246
 
 Step 2: 
-sudo php bin/magento setup:install --base-url='http://127.0.0.1/magento246/' --db-host='127.0.0.1' --db-name='magento2' --db-user='root' --db-password='root' --admin-firstname='admin' --admin-lastname='admin' --admin-email='kumar.dhananjay@orangemantra.in' --admin-user='admin' --admin-password='admin@123' --language='en_US' --currency='USD' --timezone='Asia/Kolkata' --use-rewrites=1 --cleanup-database --search-engine=elasticsearch7 --elasticsearch-host=192.168.200.24 --elasticsearch-port=9200 --backend-frontname="admin"
+sudo php bin/magento setup:install --base-url='http://127.0.0.1/magento247/' --db-host='127.0.0.1' --db-name='magento247' --db-user='root' --db-password='root@123' --admin-firstname='admin' --admin-lastname='admin' --admin-email='kumar.dhananjay@orangemantra.in' --admin-user='admin' --admin-password='admin@123' --language='en_US' --currency='USD' --timezone='Asia/Kolkata' --use-rewrites=1 --cleanup-database --search-engine=elasticsearch7 --elasticsearch-host=192.168.200.24 --elasticsearch-port=9200 --backend-frontname="admin"
 
 
 Create a virtual host : 
@@ -61,4 +61,5 @@ Step 7: go to var/www/html/magento2 & run below commands,
 
 1. sudo chmod -R 0777 var pub generated
 2. sudo php bin/magento c:f
+3.sudo bin/magento module:disable Magento_AdminAdobeImsTwoFactorAuth Magento_TwoFactorAuth
 

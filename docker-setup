@@ -1,0 +1,76 @@
+Docker hub login
+------------------------
+
+user:  dhananjayom
+pass:  Orange@123
+
+
+Build iamge  
+---------------
+1. docker build -t basic-app .
+
+show list image
+----------------------
+2.docker images
+
+Run  image with Containner:
+----------------------------- 
+
+docker run -d -p 3300:3300 --name app-one first-myapp
+
+ -d: Runs the container in detached mode (in the background).
+ -p 3000:3000: Maps port 3000 on the host to port 3000 on the container (replace 3000 with your app's port if different).
+ --name my-app: Assigns a name (my-app) to the container for easier management.
+ basic-app: The name of the Docker image you built.
+
+
+Docker Stop 
+-------------------
+docker container rm <Container ID>
+
+
+ Delete image
+ --------------
+
+ all image delete cmd :  docker rmi $(docker images -q)
+
+ 
+ docker image rm  "image name"
+ example:  
+ docker image  rm  first-myapp
+ docker image  rm  first-myapp -f 
+
+
+ Container list
+ ------------------------
+ docker ps -a
+docker run -d -p 7000:7000 --name dk-container dk-app
+
+ Delete  Container: 
+ --------------------------
+ docker container rm  "container name"
+ example:  docker container rm  d0053a97accd
+
+ Delete all container and image with single command
+ --------------------------------------------------------
+
+ docker system prune -a
+
+
+ Docker image with version
+ ----------------------------------
+ docker build -t om-app:v2
+
+ Run containe with  image
+ --------------------------
+
+
+ Run container with volume 
+ -----------------------------------
+
+ docker run  --name basic-container -p 5000:5000 --rm  -v /home/orange/Documents/Nodejs/DockerExample:/app dk-app
+
+
+
+/home/orange/Documents/Nodejs/Ecommerce/server.js
+

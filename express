@@ -1,0 +1,53 @@
+
+Roadmap Node JS
+--------------------
+
+1. SE6 Java script
+2. Node js
+3. mongodb
+4. Json webtoken(JWT)
+5. bcrypt.js: For password hasing encript and  decript
+6. socket.io :  Chat application  (https://socket.io/docs/v4/)
+7. Postman
+8. Node js Testing : 
+9. Typescript 
+10. Microservice, Docker
+
+
+
+Job portal doc
+-----------------------
+npm init
+npm i express
+npm i nodemon
+change packahe.json file
+"scripts": {
+    "start": "node server.js",
+    "server": "node server.js"
+  },
+
+  Start application Commandn 
+  => npm run server
+  => nodemon server	
+
+  mongo cloud
+  mongodb+srv://MZoZmncNMLzRzr36:<password>@cluster0.3rjfakt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+  user mongo
+  pass: 5#g_cZ@ezXuah*#
+
+
+  user : job-portal
+  pass:  7q0eRp6bWA8RcPve
+
+
+  mongodb+srv://job-portal:7q0eRp6bWA8RcPve@jobportal.ktnnoln.mongodb.net/?retryWrites=true&w=majority&appName=jobportal
+
+
+
+mongodb+srv://job-portal:7q0eRp6bWA8RcPve@jobportal.ktnnoln.mongodb.net/?retryWrites=true&w=majority&appName=jobportal
+
+  mongodb+srv://7q0eRp6bWA8RcPve:7q0eRp6bWA8RcPve@jobportal.ktnnoln.mongodb.net/
+
+
+  mongodb://localhost:27017/mongodb-course

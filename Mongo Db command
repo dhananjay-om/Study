@@ -1,0 +1,63 @@
+Mongo Db command
+
+check status
+-----------------------
+sudo systemctl status mongod
+
+Connect Mongo db
+---------------------
+mongosh
+
+show database;
+show dbs;
+
+Create Databse;
+use mongodb-course
+
+Insert  data
+------------------
+db.products.insertOne({pid:1,pname:"product one",price:200})
+
+Find command
+--------------------
+db.products.find().pretty()
+
+Show collection
+----------------------
+show collections
+
+Insert many record
+----------------------------
+db.products.insertMany([{pid:2,pname:"Product three"},{pid:3,pname:"Product four"},{pid:4,pname:"Product Five"}])
+
+Conditional logical operator
+--------------------
+
+db.products.find({pid:{$gt:2}})
+db.products.find({pname:{$regex:"p"}})
+db.products.find({$and:[{pid:1},{pname:"Product Five"}]})
+
+
+Update query
+-------------------
+db.products.updateOne({pid:4},{$set:{pname:"new product"}})
+
+Remove query
+---------------------
+db.products.deleteOne({pid:4})
+
+LIMIT
+-----------
+db.products.find().limit(2)
+
+SKIp
+--------------
+db.products.find().skip(2)
+Sorting
+---------------
+db.products.find().sort({pid:-1})
+
+
+
+
+
